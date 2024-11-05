@@ -17,7 +17,6 @@ body {
 
 .email {
     text-decoration: underline dashed;
-    user-select: text;
 }
 
 .main-title {
