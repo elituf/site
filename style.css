@@ -1,4 +1,7 @@
-@import url(https://fonts.bunny.net/css?family=bokor:400);
+@font-face {
+    font-family: 'Bokor';
+    src: url('fonts/Bokor-Regular.woff2');
+}
 
 @font-face {
     font-family: 'Iosevka', monospace;
