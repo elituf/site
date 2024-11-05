@@ -15,7 +15,8 @@ body {
 }
 
 .email {
-    text-decoration: underline dashed;
+    color: white;
+    text-decoration: underline dotted;
 }
 
 .main-title {
