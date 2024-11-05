@@ -1,20 +1,25 @@
 @import url(https://fonts.bunny.net/css?family=bokor:400);
+
 @font-face {
     font-family: 'Iosevka', monospace;
-    src: url('assets/Iosevka-Regular.woff2');
+    src: url('fonts/Iosevka-Regular.woff2');
 }
+
 * {
     user-select: none;
 }
+
 body {
     background-color: black;
     color: white;
     font-family: 'Iosevka', monospace;
 }
+
 .email {
     text-decoration: underline dashed;
     user-select: text;
 }
+
 .main-title {
     font-family: 'Bokor', display;
     font-size: 5em;
@@ -22,15 +27,18 @@ body {
     margin-top: 0.2em;
     margin-bottom: 0em;
 }
+
 .separator {
     line-height: 0em;
     margin-top: 0.5em;
     margin-bottom: 0em;
     user-select: none;
 }
+
 .content {
     line-height: 1.3em;
 }
+
 .box {
     display: flex;
     justify-content: center;
@@ -38,6 +46,30 @@ body {
     max-width: 480px;
     margin: 0 auto;
 }
+
+div.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+}
+
+ul.buttons {
+    list-style-type: none;
+    margin: -8px;
+    padding: 0;
+    padding-left: 10px;
+    display: flex;
+}
+
+ul.buttons li {
+    margin-right: 3px;
+}
+
 div.footer {
     display: flex;
     justify-content: center;
@@ -47,7 +79,9 @@ div.footer {
     bottom: 0;
     left: 0;
     right: 0;
+    height: 2.9em;
 }
+
 /* ul.footer {
     list-style-type: none;
     margin: 0;
@@ -55,13 +89,16 @@ div.footer {
     padding-left: 10px;
     display: flex;
 }
+
 ul.footer li {
     margin-right: 10px;
 }
+
 ul.footer a {
     color: white;
     text-decoration: none;
 }
+
 ul.footer a:hover {
     text-decoration: underline;
 } */
