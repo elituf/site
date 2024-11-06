@@ -5,7 +5,8 @@
 
 @font-face {
     font-family: 'Iosevka';
-    src: url('fonts/Iosevka-Regular.woff2');
+    src: url('fonts/IosevkaCustom-Regular.woff2');
+    font-display: swap;
 }
 
 body {
