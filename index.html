@@ -79,8 +79,8 @@
         max-width: 480px;
         margin: 0 auto;
         padding: 0 20px;
-        position: absolute;
-        bottom: 50px;
+        position: relative;
+        bottom: 4px;
         left: 0;
         right: 0;
     }
@@ -98,6 +98,10 @@
     ul.buttons li {
         /* margin-right: 3px; */
         line-height: 0;
+    }
+
+    a {
+        color: white;
     }
 
     div.footer {
@@ -119,9 +123,7 @@
     ];
 
     function setRandomText() {
-        const paragraph = document.querySelector('#quote');
-        const randomText = texts[Math.floor(Math.random() * texts.length)];
-        paragraph.textContent = randomText;
+        document.querySelector('#quote').textContent = texts[Math.floor(Math.random() * texts.length)];
     }
 
     document.addEventListener('DOMContentLoaded', setRandomText);
@@ -131,10 +133,8 @@
     let currentIndex = 0;
 
     function cycleText() {
-        const paragraph = document.querySelector('#thing');
-        paragraph.textContent = characters[currentIndex];
-
-        currentIndex = (currentIndex + 1) % characters.length;
+        document.querySelector('#thing').textContent = characters[currentIndex];
+        currentIndex = currentIndex === 0 ? 1 : 0;
     }
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -160,15 +160,15 @@
     <div style="position: absolute; bottom: 0; left: 0; right: 0;">
         <div class="buttons">
             <ul class="buttons">
-                <li><a href="https://futile.eu"><img src="buttons/futile.png" width="88px" height="31px"></a></li>
-                <li><a href="https://xenia.blahaj.land/"><img src="buttons/rose_88x31.png" width="88px"
-                            height="31px"></a></li>
-                <li><iframe src="//incr.easrng.net/badge?key=futile" style="background: url(//incr.easrng.net/bg.gif)"
-                        title="increment badge" width="88" height="31" frameborder="0"></iframe></li>
-                <li><a href="https://fedoraproject.org/spins/kde"><img src="buttons/fedora.png" width="88px"
-                            height="31px"></a></li>
-                <li><a href="https://mozilla.org/firefox"><img src="buttons/firefox4.gif" width="88px"
-                            height="31px"></a></li>
+                <li><a href="https://futile.eu"><img src="buttons/futile.png" width="88px" height="31px" alt="by futile"></a></li>
+                <li><a href="https://xenia.blahaj.land/"><img src="buttons/rose_88x31.png" width="88px" height="31px" alt="by rose"></a></li>
+                <li><iframe src="//incr.easrng.net/badge?key=futile" style="background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0"></iframe></li>
+                <li><a href="https://fedoraproject.org/spins/kde"><img src="buttons/fedora.png" width="88px" height="31px" alt="by unknown; retouched by futile"></a></li>
+                <li><a href="https://mozilla.org/firefox"><img src="buttons/firefox4.gif" width="88px" height="31px" alt="by unknown"></a></li>
+                <li><a href="https://vscodium.com"><img src="buttons/vscodium.com.png" width="88px" height="31px" alt="by unknown"></a></li>
+                <li><img src="buttons/FirtniteButton.png" onclick="alert('firt night')" width="88px" height="31px" alt="by unknown"></li>
+                <li><a href="https://ublockorigin.com"><img src="buttons/ublock.png" width="88px" height="31px" alt="by unknown"></a></li>
+                <li><a href="https://rust-lang.org"><img src="buttons/rustNOW.png" width="88px" height="31px" alt="by futile"></a></li>
             </ul>
         </div>
         <div class="footer">
