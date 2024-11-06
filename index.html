@@ -4,10 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>« futile »</title>
     <script> let FF_FOUC_FIX; </script>
 </head>
+
+<style>
+    @import url(https://fonts.bunny.net/css?family=bokor:400|ibm-plex-mono:400);
+
+    body {
+        background-color: black;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+    }
+
+    p {
+        letter-spacing: -0.02em;
+    }
+
+    .email {
+        color: white;
+        text-decoration: underline dotted;
+    }
+
+    .main-title {
+        font-family: 'Bokor', serif;
+        font-size: 5em;
+        line-height: 1em;
+        margin-top: 0.2em;
+        margin-bottom: 0em;
+        user-select: none;
+        font-weight: normal;
+    }
+
+    /* hacky way of making my font look nicer on firefox 
+   while having chrome's rendering of it not be bloated 
+   */
+    @supports (-moz-appearance: none) {
+        .main-title {
+            font-weight: bold;
+        }
+    }
+
+    .separator {
+        color: white;
+        margin-top: 0.5em;
+        margin-bottom: 0em;
+        width: 50px;
+    }
+
+    .content {
+        line-height: 1.3em;
+    }
+
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 480px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    div.buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 480px;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+    }
+
+    ul.buttons {
+        list-style-type: none;
+        margin: -8px;
+        padding: 0;
+        padding-left: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    ul.buttons li {
+        margin-right: 3px;
+        line-height: 1;
+    }
+
+    div.footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2.9em;
+    }
+</style>
 
 <body>
     <div class="box">
@@ -26,10 +125,14 @@
         <div class="buttons">
             <ul class="buttons">
                 <li><a href="https://futile.eu"><img src="buttons/futile.png" width="88px" height="31px"></a></li>
-                <li><a href="https://xenia.blahaj.land/"><img src="buttons/rose_88x31.png" width="88px" height="31px"></a></li>
-                <li><iframe src="//incr.easrng.net/badge?key=futile" style="background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0"></iframe></li>
-                <li><a href="https://fedoraproject.org/spins/kde"><img src="buttons/fedora.png" width="88px" height="31px"></a></li>
-                <li><a href="https://mozilla.org/firefox"><img src="buttons/firefox4.gif" width="88px" height="31px"></a></li>
+                <li><a href="https://xenia.blahaj.land/"><img src="buttons/rose_88x31.png" width="88px"
+                            height="31px"></a></li>
+                <li><iframe src="//incr.easrng.net/badge?key=futile" style="background: url(//incr.easrng.net/bg.gif)"
+                        title="increment badge" width="88" height="31" frameborder="0"></iframe></li>
+                <li><a href="https://fedoraproject.org/spins/kde"><img src="buttons/fedora.png" width="88px"
+                            height="31px"></a></li>
+                <li><a href="https://mozilla.org/firefox"><img src="buttons/firefox4.gif" width="88px"
+                            height="31px"></a></li>
             </ul>
         </div>
         <div class="footer">
