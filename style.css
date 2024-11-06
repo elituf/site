@@ -1,17 +1,13 @@
-@font-face {
-    font-family: 'Bokor';
-    src: url('fonts/Bokor-Regular.woff2');
-}
-
-@font-face {
-    font-family: 'Iosevka';
-    src: url('fonts/IosevkaCustom-Regular.woff2');
-}
+@import url(https://fonts.bunny.net/css?family=bokor:400|ibm-plex-mono:400);
 
 body {
     background-color: black;
     color: white;
-    font-family: 'Iosevka', monospace;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+p {
+    letter-spacing: -0.02em;
 }
 
 .email {
@@ -20,19 +16,29 @@ body {
 }
 
 .main-title {
-    font-family: 'Bokor', display;
+    font-family: 'Bokor', serif;
     font-size: 5em;
     line-height: 1em;
     margin-top: 0.2em;
     margin-bottom: 0em;
     user-select: none;
+    font-weight: normal;
+}
+
+/* hacky way of making my font look nicer on firefox 
+   while having chrome's rendering of it not be bloated 
+*/
+@supports (-moz-appearance: none) {
+    .main-title {
+        font-weight: bold;
+    }
 }
 
 .separator {
-    line-height: 0em;
+    color: white;
     margin-top: 0.5em;
     margin-bottom: 0em;
-    user-select: none;
+    width: 50px;
 }
 
 .content {
