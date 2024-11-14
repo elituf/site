@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>« futile »</title>
     <script> let FF_FOUC_FIX; </script>
-    <link rel="dns-prefetch" href="//incr.easrng.net">
-    <link rel="preload" href="//incr.easrng.net/bg.gif" as="image">
+    <link rel="dns-prefetch" href="https://incr.easrng.net">
+    <link rel="preload" href="https://incr.easrng.net/bg.gif" as="image">
 </head>
 
 <style>
@@ -109,34 +109,32 @@
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        height: 2.9em;
+        height: 3em;
+        font-size: 0.95em;
     }
 </style>
 
 <!-- WARNING! this website contains javascript. proceed with caution. -->
 <script>
     const texts = [
-        "who are you",
-        "lorem ipsum dolor sit amet",
-        "hot garfields in your area",
-        "don't forget to drink water"
+        'who are you',
+        'lorem ipsum dolor sit amet',
+        'hot garfields in your area',
+        'don\'t forget to drink water',
+        'do you like hurting other people?',
     ];
-
     function setRandomText() {
         document.querySelector('#quote').textContent = texts[Math.floor(Math.random() * texts.length)];
     }
-
     document.addEventListener('DOMContentLoaded', setRandomText);
 </script>
 <script>
-    const characters = ['◇', '◆'];
+    const characters = ['♙', '♟'];
     let currentIndex = 0;
-
     function cycleText() {
-        document.querySelector('#thing').textContent = characters[currentIndex];
+        document.querySelector('#bullet').textContent = characters[currentIndex];
         currentIndex = currentIndex === 0 ? 1 : 0;
     }
-
     document.addEventListener('DOMContentLoaded', () => {
         cycleText();
         setInterval(cycleText, 1000);
@@ -150,11 +148,7 @@
     <hr class="separator">
     <div class="box">
         <p class="content">
-            hello, my name is futile. i am a weird concept from the internet (or a person from europe, depending on
-            who you ask).<br><br>
-            i like programming (mostly rust), computers, linux, malicious software like game hacks and
-            malware, and any vehicle whether it drives or flies.<br><br>
-            if you want to contact me, email <a class="click" href="mailto:me@futile.eu">me@futile.eu</a>
+            hello, my name is futile. i am a weird concept from the internet (or a person from europe, depending on who you ask).<br><br>i like programming (mostly rust), computers, linux, malicious software like game hacks and malware, and any vehicle whether it drives or flies.<br><br>if you want to contact me, email <a class="click" href="mailto:me@futile.eu">me@futile.eu</a>
         </p>
     </div>
     <div style="position: absolute; bottom: 0; left: 0; right: 0;">
@@ -162,9 +156,9 @@
             <ul class="buttons">
                 <li><a href="https://futile.eu"><img src="buttons/futile.png" width="88px" height="31px" alt="by futile"></a></li>
                 <li><a href="https://xenia.blahaj.land/"><img src="buttons/rose_88x31.png" width="88px" height="31px" alt="by rose"></a></li>
-                <li><iframe src="//incr.easrng.net/badge?key=futile" style="background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0"></iframe></li>
+                <li><iframe src="//incr.easrng.net/badge?key=futile" style="background: url(https://incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0"></iframe></li>
                 <li><a href="https://fedoraproject.org/spins/kde"><img src="buttons/fedora.png" width="88px" height="31px" alt="by unknown; retouched by futile"></a></li>
-                <li><a href="https://mozilla.org/firefox"><img src="buttons/firefox4.gif" width="88px" height="31px" alt="by unknown"></a></li>
+                <li><a href="https://mozilla.org/firef&nbsp;x"><img src="buttons/firefox4.gif" width="88px" height="31px" alt="by unknown"></a></li>
                 <li><a href="https://vscodium.com"><img src="buttons/vscodium.com.png" width="88px" height="31px" alt="by unknown"></a></li>
                 <li><img src="buttons/FirtniteButton.png" onclick="alert('firt night')" width="88px" height="31px" alt="by unknown"></li>
                 <li><a href="https://ublockorigin.com"><img src="buttons/ublock.png" width="88px" height="31px" alt="by unknown"></a></li>
@@ -172,11 +166,10 @@
             </ul>
         </div>
         <div class="footer">
-            <p id="quote">who are you</p>
-            &nbsp;
-            <p id="thing" style="user-select: none;">◇</p>
-            &nbsp;
-            <p><a class="click" target="_blank" href="https://codeberg.org/futile">codeberg</a></p>
+            <p id="quote">who are you</p>&nbsp;
+            <p id="bullet" style="user-select: none;">◇</p>&nbsp;
+            <p><a class="click" target="_blank" href="https://codeberg.org/futile">codeberg</a></p>&nbsp;
+            <p><a class="click" target="_blank" href="https://steamcommunity.com/id/elituf">steam</a></p>
         </div>
     </div>
 </body>
