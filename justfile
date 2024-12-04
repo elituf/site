@@ -6,8 +6,8 @@ deploy-wasm:
     scp -pr dist/ {{server}}:/var/www/futile.eu/dist/
 
 deploy-caddy:
-    scp -pr Caddyfile {{server}}:/home/futile/Caddyfile
-    ssh {{server}} 'sudo mv /home/futile/Caddyfile /etc/caddy/Caddyfile'
+    scp -pr Caddyfile {{server}}:Caddyfile
+    ssh {{server}} 'sudo mv Caddyfile /etc/caddy/Caddyfile'
     ssh {{server}} 'sudo systemctl reload caddy'
 
 deploy: deploy-wasm deploy-caddy
