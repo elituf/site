@@ -10,6 +10,7 @@
     font-family: 'Iosevka';
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: local('Iosevka');
     src: url('static/fonts/Iosevka-Regular.woff2') format('woff2');
 }
