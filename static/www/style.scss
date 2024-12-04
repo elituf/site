@@ -137,16 +137,9 @@ div.buttons {
     }
 }
 
-.button_container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
 ul.buttons {
     list-style-type: none;
-    margin: -8px;
+    margin: 0px;
     padding: 0;
     @include flex-center;
     flex-wrap: wrap;
@@ -162,7 +155,6 @@ ul.buttons {
 
 div.footer {
     @include flex-center;
-    height: 3em;
-    font-size: 0.95em;
+    height: 2.4em;
     gap: 5px;
 }
