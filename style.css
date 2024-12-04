@@ -1,13 +1,23 @@
-@import url(https://fonts.bunny.net/css?family=bokor:400|ibm-plex-mono:400);
+@font-face {
+    font-family: 'Bokor';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bokor');
+    src: url('static/fonts/bokor-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Iosevka';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Iosevka');
+    src: url('static/fonts/Iosevka-Regular.woff2') format('woff2');
+}
 
 body {
     background-color: black;
     color: white;
-    font-family: 'IBM Plex Mono', monospace;
-}
-
-p {
-    letter-spacing: -0.07em;
+    font-family: 'Iosevka', monospace;
 }
 
 .box {
@@ -70,6 +80,7 @@ while having chrome's rendering of it not be bloated
     cursor: pointer;
     text-decoration: none;
     border-radius: 0;
+    user-select: none;
 }
 
 .shiny {
