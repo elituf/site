@@ -1,0 +1,163 @@
+$font-path: "static/fonts";
+$primary-color: white;
+$background-color: black;
+
+@font-face {
+    font-family: 'Bokor';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bokor'),
+    url("#{$font-path}/bokor-latin-400-normal.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Iosevka';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Iosevka'),
+    url("#{$font-path}/Iosevka-Regular.woff2") format('woff2');
+}
+
+body {
+    background-color: $background-color;
+    color: $primary-color;
+    font-family: 'Iosevka', monospace;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-styles {
+    display: inline-block;
+    padding: 3px 6px;
+    font-size: 16px;
+    text-align: center;
+    color: $primary-color;
+    background-color: $background-color;
+    border: 1px solid $primary-color;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 0;
+    user-select: none;
+}
+
+.box,
+div.buttons {
+    @include flex-center;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.main-title {
+    font-family: 'Bokor', serif;
+    font-size: 5em;
+    line-height: 1em;
+    margin: 0.2em 0 0 0;
+    user-select: none;
+    font-weight: normal;
+
+    @supports (-moz-appearance: none) {
+        font-weight: bold;
+    }
+}
+
+.separator {
+    color: $primary-color;
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+    width: 50px;
+}
+
+.content {
+    line-height: 1.3em;
+}
+
+.click {
+    color: $primary-color;
+    text-decoration: underline dotted;
+
+    &:hover {
+        text-decoration: underline solid;
+    }
+}
+
+.button {
+    @include button-styles;
+
+    &.shiny {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -110%;
+            width: 110%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            transform: skewX(-30deg);
+            animation: shine 5s infinite;
+            animation-delay: 5s;
+            visibility: hidden;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            &::before {
+                animation: none;
+            }
+        }
+    }
+}
+
+@keyframes shine {
+    0% {
+        left: -110%;
+        visibility: hidden;
+    }
+
+    10% {
+        visibility: visible;
+        left: 110%;
+    }
+
+    100% {
+        left: 110%;
+    }
+}
+
+.button_container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+ul.buttons {
+    list-style-type: none;
+    margin: -8px;
+    padding: 0;
+    @include flex-center;
+    flex-wrap: wrap;
+
+    li {
+        line-height: 0;
+
+        a {
+            color: $primary-color;
+        }
+    }
+}
+
+div.footer {
+    @include flex-center;
+    height: 3em;
+    font-size: 0.95em;
+    gap: 5px;
+}
