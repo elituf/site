@@ -11,18 +11,18 @@ $background-color: black;
 }
 
 @font-face {
-    font-family: 'Iosevka';
+    font-family: 'IBM Plex Mono';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local('Iosevka'),
-    url("#{$font-path}/Iosevka-Regular.woff2") format('woff2');
+    src: local('IBM Plex Mono'),
+    url("#{$font-path}/ibm-plex-mono-latin-400-normal.woff2") format('woff2');
 }
 
 body {
     background-color: $background-color;
     color: $primary-color;
-    font-family: 'Iosevka', monospace;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 ::selection {
