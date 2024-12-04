@@ -2,6 +2,7 @@ server := "futile@futile.eu"
 
 deploy-wasm:
     trunk build --release
+    rm -r dist/static/www
     ssh {{server}} 'rm -rf /var/www/futile.eu/dist/'
     scp -pr dist/ {{server}}:/var/www/futile.eu/dist/
 
