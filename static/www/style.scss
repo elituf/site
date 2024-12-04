@@ -25,6 +25,11 @@ body {
     font-family: 'Iosevka', monospace;
 }
 
+::selection {
+    background-color: $primary-color;
+    color: $background-color;
+}
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
