@@ -11,8 +11,8 @@ fn firtnite() -> Callback<MouseEvent> {
 
 pub fn buttons() -> Html {
     html! {
-    <div class="buttons">
-        <ul class="buttons">
+    <div class="footer">
+        <ul class="footer buttons">
             <li><a href="https://futile.eu"><img
                 src="static/buttons/futile.png" width="88px" height="31px"
                 alt="button that says 'futile' in white, grotesque font, on a black background, with a white outline | by futile"

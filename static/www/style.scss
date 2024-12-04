@@ -36,22 +36,8 @@ body {
     align-items: center;
 }
 
-@mixin button-styles {
-    display: inline-block;
-    padding: 3px 6px;
-    font-size: 16px;
-    text-align: center;
-    color: $primary-color;
-    background-color: $background-color;
-    border: 1px solid $primary-color;
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 0;
-    user-select: none;
-}
-
 .box,
-div.buttons {
+div.footer {
     @include flex-center;
     max-width: 480px;
     margin: 0 auto;
@@ -93,7 +79,17 @@ div.buttons {
 }
 
 .button {
-    @include button-styles;
+    display: inline-block;
+    padding: 3px 6px;
+    font-size: 16px;
+    text-align: center;
+    color: $primary-color;
+    background-color: $background-color;
+    border: 1px solid $primary-color;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 0;
+    user-select: none;
 
     &.shiny {
         position: relative;
@@ -137,10 +133,8 @@ div.buttons {
     }
 }
 
-ul.buttons {
+ul.footer {
     list-style-type: none;
-    margin: 0px;
-    padding: 0;
     @include flex-center;
     flex-wrap: wrap;
 
@@ -153,8 +147,30 @@ ul.buttons {
     }
 }
 
-div.footer {
-    @include flex-center;
-    height: 2.4em;
+.footer-container {
+    margin-top: 64px;
+
+    @media (min-height: 816px) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-top: 0;
+    }
+}
+
+ul.footer.buttons {
+    margin: 0px;
+    padding: 0;
+}
+
+div.footer.quote {
+    text-align: center;
+    word-wrap: break-word;
+    margin-top: -8px;
+}
+
+div.footer.links {
+    margin-top: -12px;
     gap: 5px;
 }
