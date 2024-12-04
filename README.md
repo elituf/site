@@ -1,2 +1,10 @@
-## futile site
-i made this in a couple of hours while listening to korn. i don't know web development. this is my first time making a website that i have put effort into and haven't been helped by someone or repurposed a different source into my own.
+## site
+my website on the internet
+<br><br>![](favicon.ico)
+
+## stack
+so basically:
+- html, css
+- [yew framework](https://yew.rs)
+- [caddy server](https://caddyserver.com)
+- cheapest hetzner vps
