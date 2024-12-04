@@ -1,6 +1,6 @@
 ## site
 my website on the internet
-<br><br>![](favicon.ico)
+<br><br>![](static/www/favicon.ico)
 
 ## stack
 so basically:
