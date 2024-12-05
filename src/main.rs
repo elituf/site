@@ -34,9 +34,6 @@ fn page() -> Html {
                 <a class="click" target="_blank" href="https://codeberg.org/futile"> { "git" } </a>
                 <a class="click" target="_blank" href="https://steamcommunity.com/id/elituf"> { "steam" } </a>
             </div>
-            <div class="footer" style="margin-top: -40px">
-                <div><p> { '\u{200B}' } </p></div>
-            </div>
         </div>
     </>
     }

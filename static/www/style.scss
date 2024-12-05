@@ -1,11 +1,14 @@
-$font-path: "static/fonts";
 $primary-color: white;
 $background-color: black;
+$overlay: rgba(255, 255, 255, 0.5);
+
+$font-path: "static/fonts";
 
 @font-face {
     font-family: 'Bokor';
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: local('Bokor'),
     url("#{$font-path}/bokor-latin-400-normal.woff2") format('woff2');
 }
@@ -46,7 +49,7 @@ div.footer {
 }
 
 .main-title {
-    font-family: 'Bokor', serif;
+    font-family: 'Bokor', 'Georgia', serif;
     font-size: 5em;
     line-height: 1em;
     margin: 0.2em 0 0 0;
@@ -60,8 +63,7 @@ div.footer {
 
 .separator {
     color: $primary-color;
-    margin-top: 0.5em;
-    margin-bottom: 0em;
+    margin: 0.5em auto 0em;
     width: 50px;
 }
 
@@ -81,14 +83,10 @@ div.footer {
 .button {
     display: inline-block;
     padding: 3px 6px;
-    font-size: 16px;
-    text-align: center;
     color: $primary-color;
     background-color: $background-color;
     border: 1px solid $primary-color;
     cursor: pointer;
-    text-decoration: none;
-    border-radius: 0;
     user-select: none;
 
     &.shiny {
@@ -102,7 +100,7 @@ div.footer {
             left: -110%;
             width: 110%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.5);
+            background: $overlay;
             transform: skewX(-30deg);
             animation: shine 5s infinite;
             animation-delay: 5s;
@@ -148,29 +146,26 @@ ul.footer {
 }
 
 .footer-container {
-    margin-top: 64px;
+    margin: 64px auto auto auto;
 
     @media (min-height: 816px) {
         position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin-top: 0;
+        inset: auto 0 12px;
+        margin: auto auto auto auto;
     }
 }
 
 ul.footer.buttons {
-    margin: 0px;
     padding: 0;
 }
 
 div.footer.quote {
     text-align: center;
     word-wrap: break-word;
-    margin-top: -8px;
+    margin: -24px auto auto auto;
 }
 
 div.footer.links {
-    margin-top: -12px;
-    gap: 5px;
+    margin: -12px auto auto auto;
+    gap: 6px;
 }
