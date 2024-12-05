@@ -21,10 +21,7 @@ pub fn buttons() -> Html {
                 src="static/buttons/rose_88x31.png" width="88px" height="31px"
                 alt="button that says 'rose' with a rose growing out of the 'o', with milk-chan to the right of the text | by rose"
             /></a></li>
-            <li><iframe
-                src="https://incr.easrng.net/badge?key=futile" width="88" height="31" frameborder="0" title="increment badge"
-                style="background: url(https://incr.easrng.net/bg.gif)"
-            /></li>
+            <li><iframe src="https://increm.net/badge?key=futile" title="incremnet badge" width="88" height="31" frameborder="0"></iframe></li>
             <li><a href="https://fedoraproject.org/spins/kde"><img
                 src="static/buttons/fedora.png" width="88px" height="31px"
                 alt="button that says 'powered by fedora' in white and blue, with the fedora logo to the left | by unknown; retouched by futile"
