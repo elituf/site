@@ -7,3 +7,5 @@ futile.eu {
     file_server
     encode gzip zstd
 }
+
+import Caddyfile.d/*.caddyfile
