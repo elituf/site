@@ -26,15 +26,20 @@
             unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
         }
 
+        :root {
+            --primary-color: white;
+            --background-color: black;
+        }
+
         body {
-            background-color: black;
-            color: white;
+            background-color: var(--background-color);
+            color: var(--primary-color);
             font-family: "IBM Plex Mono", monospace;
         }
 
         ::selection {
-            background-color: white;
-            color: black;
+            background-color: var(--primary-color);
+            color: var(--background-color);
         }
 
         .box,
@@ -64,7 +69,7 @@
         }
 
         .separator {
-            color: white;
+            color: var(--primary-color);
             margin: 0.5em auto 0em;
             width: 50px;
         }
@@ -74,7 +79,7 @@
         }
 
         .click {
-            color: white;
+            color: var(--primary-color);
             text-decoration: underline dotted;
         }
 
@@ -85,9 +90,9 @@
         .button {
             display: inline-block;
             padding: 3px 6px;
-            color: white;
-            background-color: black;
-            border: 1px solid white;
+            color: var(--primary-color);
+            background-color: var(--background-color);
+            border: 1px solid var(--primary-color);
             cursor: pointer;
             user-select: none;
         }
@@ -146,7 +151,7 @@
         }
 
         ul.footer li a {
-            color: white;
+            color: var(--primary-color);
         }
 
         .footer-container {
@@ -185,14 +190,17 @@
             "i am not a web developer",
             "it's nice, isn't it?",
             "do you like hurting other people?",
+            "check out increm.net !"
         ];
         document.addEventListener('DOMContentLoaded', () => {
             const randomIndex = Math.floor(Math.random() * quotes.length);
             document.getElementById('quote').textContent = '« ' + quotes[randomIndex] + ' »';
         });
     </script>
-    <link rel="icon"
-        href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00MCAtNDAgODAgODAiPgogIDxjaXJjbGUgcj0iMzkiLz4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCwzOGEzOCwzOCAwIDAgMSAwLC03NmExOSwxOSAwIDAgMSAwLDM4YTE5LDE5IDAgMCAwIDAsMzgiLz4KICA8Y2lyY2xlIHI9IjUiIGN5PSIxOSIgZmlsbD0iI2ZmZiIvPgogIDxjaXJjbGUgcj0iNSIgY3k9Ii0xOSIvPgo8L3N2Zz4K">
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdC
+        b3g9Ii00MCAtNDAgODAgODAiPgogIDxjaXJjbGUgcj0iMzkiLz4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCwzOGEzOCwzOCAwIDAgM
+        SAwLC03NmExOSwxOSAwIDAgMSAwLDM4YTE5LDE5IDAgMCAwIDAsMzgiLz4KICA8Y2lyY2xlIHI9IjUiIGN5PSIxOSIgZmlsbD0iI2ZmZi
+        IvPgogIDxjaXJjbGUgcj0iNSIgY3k9Ii0xOSIvPgo8L3N2Zz4K">
 </head>
 
 <body>
