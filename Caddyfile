@@ -1,11 +1,11 @@
 www.futile.eu {
-    redir https://futile.eu{uri}
+	redir https://futile.eu{uri}
 }
 
 futile.eu {
-    root * /var/www/futile.eu/dist
-    file_server
-    encode gzip zstd
+	root * /var/www/futile.eu
+	file_server
+	encode gzip zstd
 }
 
 import Caddyfile.d/*.caddyfile

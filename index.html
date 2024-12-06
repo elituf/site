@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>« futile »</title>
+    <link rel="preload" href="static/fonts/bokor.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="static/fonts/ibm-plex-mono.woff2" as="font" type="font/woff2" crossorigin />
+    <style>
+        @font-face {
+            font-family: "Bokor";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: local("Bokor"), url("static/fonts/bokor.woff2") format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: "IBM Plex Mono";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: local("IBM Plex Mono"), url("static/fonts/ibm-plex-mono.woff2") format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: "IBM Plex Mono", monospace;
+        }
+
+        ::selection {
+            background-color: white;
+            color: black;
+        }
+
+        .box,
+        div.footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .main-title {
+            font-family: "Bokor", "Georgia", serif;
+            font-size: 5em;
+            line-height: 1em;
+            margin: 0.2em 0 0 0;
+            user-select: none;
+            font-weight: normal;
+        }
+
+        @supports (-moz-appearance: none) {
+            .main-title {
+                font-weight: bold;
+            }
+        }
+
+        .separator {
+            color: white;
+            margin: 0.5em auto 0em;
+            width: 50px;
+        }
+
+        .content {
+            line-height: 1.3em;
+        }
+
+        .click {
+            color: white;
+            text-decoration: underline dotted;
+        }
+
+        .click:hover {
+            text-decoration: underline solid;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 3px 6px;
+            color: white;
+            background-color: black;
+            border: 1px solid white;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .button.shiny {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .button.shiny::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -110%;
+            width: 110%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            transform: skewX(-30deg);
+            animation: shine 5s infinite;
+            animation-delay: 5s;
+            visibility: hidden;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .button.shiny::before {
+                animation: none;
+            }
+        }
+
+        @keyframes shine {
+            0% {
+                left: -110%;
+                visibility: hidden;
+            }
+
+            10% {
+                visibility: visible;
+                left: 110%;
+            }
+
+            100% {
+                left: 110%;
+            }
+        }
+
+        ul.footer {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        ul.footer li {
+            line-height: 0;
+        }
+
+        ul.footer li a {
+            color: white;
+        }
+
+        .footer-container {
+            margin: 20px auto auto auto;
+        }
+
+        @media (min-height: 816px) {
+            .footer-container {
+                position: absolute;
+                inset: auto 0 12px;
+                margin: auto auto auto auto;
+            }
+        }
+
+        ul.footer.buttons {
+            padding: 0;
+        }
+
+        div.footer.quote {
+            text-align: center;
+            word-wrap: break-word;
+            margin: -24px auto auto auto;
+        }
+
+        div.footer.links {
+            margin: -12px auto auto auto;
+            gap: 6px;
+        }
+    </style>
+    <script>
+        const quotes = [
+            "who are you",
+            "lorem ipsum dolor sit amet",
+            "hot garfields in your area",
+            "remember to drink water",
+            "i am not a web developer",
+            "it's nice, isn't it?",
+            "do you like hurting other people?",
+        ];
+        document.addEventListener('DOMContentLoaded', () => {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').textContent = '« ' + quotes[randomIndex] + ' »';
+        });
+    </script>
+    <link rel="icon"
+        href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00MCAtNDAgODAgODAiPgogIDxjaXJjbGUgcj0iMzkiLz4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCwzOGEzOCwzOCAwIDAgMSAwLC03NmExOSwxOSAwIDAgMSAwLDM4YTE5LDE5IDAgMCAwIDAsMzgiLz4KICA8Y2lyY2xlIHI9IjUiIGN5PSIxOSIgZmlsbD0iI2ZmZiIvPgogIDxjaXJjbGUgcj0iNSIgY3k9Ii0xOSIvPgo8L3N2Zz4K">
+</head>
+
+<body>
+    <script>0</script>
+    <div class="box">
+        <h1 class="main-title">futile</h1>
+    </div>
+    <hr class="separator" />
+    <div class="box">
+        <p class="content">
+            hello, my name is futile. i am a weird concept from the internet (or a person from europe, depending on who
+            you ask)<br /><br />
+            i like programming (mostly rust), computers, linux, malicious software like game hacks and malware, and any
+            vehicle whether it drives or flies.<br /><br />
+            everything i know about the aforementioned things is self-taught. i also speak english and russian
+            fluently.<br /><br />
+            if you want to contact me, email <a class="click" href="mailto:me@futile.eu">me@futile.eu</a><br /><br />
+            <script>
+                const message = `hey!
+could use a second pair of hands with something? programming, sys administration, or otherwise technical?
+
+i would love to work with/for you! reach out to me via email [me@futile.eu] (even just to exchange info for another platform)! paying me is optional, just be upfront with what you wish to do.`
+            </script>
+            <a class="button shiny" onclick="alert(message)">hire me!</a>
+        </p>
+    </div>
+    <div class="footer-container">
+        <div class="footer">
+            <ul class="footer buttons">
+                <li><a href="https://futile.eu"><img src="static/buttons/futile.png" width="88px" height="31px"
+                            alt="button that says 'futile' in white, grotesque font, on a black background, with a white outline | by futile" /></a>
+                </li>
+                <li><a href="https://xenia.blahaj.land/"><img src="static/buttons/rose_88x31.png" width="88px"
+                            height="31px"
+                            alt="button that says 'rose' with a rose growing out of the 'o', with milk-chan to the right of the text | by rose" /></a>
+                </li>
+                <li><iframe src="https://increm.net/badge?key=futile" title="incremnet badge" width="88" height="31"
+                        frameborder="0"></iframe></li>
+                <li><a href="https://fedoraproject.org/spins/kde"><img src="static/buttons/fedora.png" width="88px"
+                            height="31px"
+                            alt="button that says 'powered by fedora' in white and blue, with the fedora logo to the left | by unknown; retouched by futile" /></a>
+                </li>
+                <li><a href="https://mozilla.org/firefox"><img src="static/buttons/firefox4.gif" width="88px"
+                            height="31px"
+                            alt="button that flashes between the texts 'tested on' and 'firefox' in firefox's orange, yellow, and purple scheme, with the firefox logo to the left | by unknown" /></a>
+                </li>
+                <li><a href="https://vscodium.com"><img src="static/buttons/vscodium.com.png" width="88px" height="31px"
+                            alt="button that says 'made with vscodium' in light blue, with the vscodium logo to the right | by unknown" /></a>
+                </li>
+                <li><img src="static/buttons/FirtniteButton.png" onclick="alert('firt night')" width="88px"
+                        height="31px"
+                        alt="button that says 'firtnite' (a misspelling of 'fortnite'), otherwise looks very similar to an old fortnite title screen | by unknown" />
+                </li>
+                <li><a href="https://ublockorigin.com"><img src="static/buttons/ublock.png" width="88px" height="31px"
+                            alt="button (grey) that says 'ublock origin now!', with the ublock origin red logo to the left | by unknown" /></a>
+                </li>
+                <li><a href="https://rust-lang.org"><img src="static/buttons/rustNOW.png" width="88px" height="31px"
+                            alt="button (grey) that says 'rust now!', with the rust gear logo to the left and a yellow banner that says '1.82.0' on the to the bottom right | by futile" /></a>
+                </li>
+                <li><a href="https://1337x.to"><img src="static/buttons/piracy.png" width="88px" height="31px"
+                            alt="button (grey) that says 'piracy now!', with a jolly roger flag to the left and a black banner that says 'free' on the to the bottom right | by unknown; retouched by futile" /></a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer quote">
+            <p id="quote">&nbsp;</p>
+        </div>
+        <div class="footer links">
+            <a class="click" target="_blank" href="https://codeberg.org/futile">git</a>
+            <a class="click" target="_blank" href="https://steamcommunity.com/id/elituf">steam</a>
+        </div>
+    </div>
+</body>
+
+</html>

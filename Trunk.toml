@@ -1,6 +1,0 @@
-[build]
-target = "static/www/index.html"
-minify = "on_release"
-
-[watch]
-watch = ["src/", "static/www/"]
