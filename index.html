@@ -43,14 +43,14 @@
         }
 
         .box,
-        div.footer {
+        .footer {
             display: flex;
             justify-content: center;
-            align-items: center;
             max-width: 480px;
             margin: 0 auto;
             padding: 0 20px;
             box-sizing: border-box;
+            flex-wrap: wrap;
         }
 
         .main-title {
@@ -138,45 +138,27 @@
             }
         }
 
-        .footer {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .buttons {
-            line-height: 0;
-        }
-
-        .buttons a {
-            color: var(--primary-color);
-        }
-
-        .footer-container {
-            margin: 20px auto auto auto;
-        }
-
         @media (min-height: 816px) {
             .footer-container {
                 position: absolute;
                 inset: auto 0 12px;
-                margin: auto auto auto auto;
             }
         }
 
-        ul.footer.buttons {
-            padding: 0;
+        .footer.buttons {
+            line-height: 0;
         }
 
-        div.footer.quote {
+        .footer.buttons a {
+            color: var(--primary-color);
+        }
+
+        .footer.quote {
             text-align: center;
-            word-wrap: break-word;
             margin: -8px auto auto auto;
         }
 
-        div.footer.links {
+        .footer.links {
             margin: -12px auto auto auto;
             gap: 6px;
         }
