@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>« futile »</title>
-    <link rel="preload" href="static/fonts/bokor.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="static/fonts/ibm-plex-mono.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="icon" href="static/favicon.svg" type="image/svg+xml">
     <style>
         @font-face {
             font-family: "Bokor";
@@ -14,7 +13,6 @@
             font-weight: 400;
             font-display: swap;
             src: local("Bokor"), url("static/fonts/bokor.woff2") format("woff2");
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
         }
 
         @font-face {
@@ -23,7 +21,6 @@
             font-weight: 400;
             font-display: swap;
             src: local("IBM Plex Mono"), url("static/fonts/ibm-plex-mono.woff2") format("woff2");
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
         }
 
         :root {
@@ -31,10 +28,16 @@
             --background-color: black;
         }
 
+        body,
+        .separator,
+        .click,
+        .footer.buttons img {
+            color: var(--primary-color);
+        }
+
         body {
             background-color: var(--background-color);
-            color: var(--primary-color);
-            font-family: "IBM Plex Mono", monospace;
+            font-family: 'IBM Plex Mono', monospace;
         }
 
         ::selection {
@@ -54,7 +57,7 @@
         }
 
         .main-title {
-            font-family: "Bokor", "Georgia", serif;
+            font-family: 'Bokor', display;
             font-size: 5em;
             line-height: 1em;
             margin: 0.2em 0 0 0;
@@ -69,7 +72,6 @@
         }
 
         .separator {
-            color: var(--primary-color);
             margin: 0.5em auto 0em;
             width: 50px;
         }
@@ -79,7 +81,6 @@
         }
 
         .click {
-            color: var(--primary-color);
             text-decoration: underline dotted;
         }
 
@@ -87,61 +88,11 @@
             text-decoration: underline solid;
         }
 
-        .button {
-            display: inline-block;
-            padding: 3px 6px;
-            color: var(--primary-color);
-            background-color: var(--background-color);
-            border: 1px solid var(--primary-color);
-            cursor: pointer;
-            user-select: none;
-        }
-
-        .button.shiny {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .button.shiny::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.5);
-            transform: skewX(-30deg);
-            animation: shine 5s infinite;
-            animation-delay: 5s;
-            visibility: hidden;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .button.shiny::before {
-                animation: none;
-            }
-        }
-
-        @keyframes shine {
-            0% {
-                left: -110%;
-                visibility: hidden;
-            }
-
-            10% {
-                visibility: visible;
-                left: 110%;
-            }
-
-            100% {
-                left: 110%;
-            }
-        }
-
         .footer-container {
             margin: 24px auto auto auto;
         }
 
-        @media (min-height: 816px) {
+        @media (min-height: 800px) {
             .footer-container {
                 position: absolute;
                 inset: auto 0 12px;
@@ -152,16 +103,9 @@
             line-height: 0;
         }
 
-        .footer.buttons a {
-            color: var(--primary-color);
-        }
-
+        .footer.buttons a,
         .footer.buttons img {
             cursor: pointer;
-        }
-
-        .footer.buttons img,
-        .footer.buttons a img {
             image-rendering: pixelated;
         }
 
@@ -184,7 +128,8 @@
             "i am not a web developer",
             "it's nice, isn't it?",
             "do you like hurting other people?",
-            "check out increm.net !"
+            "check out increm.net !",
+            "get real",
         ];
         document.addEventListener('DOMContentLoaded', () => {
             const randomIndex = Math.floor(Math.random() * quotes.length);
@@ -201,8 +146,6 @@
             })
             .catch(error => console.error('error loading alt texts: ', error));
     </script>
-    <link rel="icon"
-        href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00MCAtNDAgODAgODAiPgogIDxjaXJjbGUgcj0iMzkiLz4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCwzOGEzOCwzOCAwIDAgMSAwLC03NmExOSwxOSAwIDAgMSAwLDM4YTE5LDE5IDAgMCAwIDAsMzgiLz4KICA8Y2lyY2xlIHI9IjUiIGN5PSIxOSIgZmlsbD0iI2ZmZiIvPgogIDxjaXJjbGUgcj0iNSIgY3k9Ii0xOSIvPgo8L3N2Zz4K">
 </head>
 
 <body>
@@ -213,25 +156,17 @@
     <hr class="separator">
     <div class="box">
         <p class="content">
-            hello, my name is futile. i am a weird concept from the internet, or, a person from europe, depending on who
-            you ask. <br><br>
-            i love computers, programming (mostly rust), linux, malicious software (i.e. game hacks, malware), playing
-            games, and any
-            vehicle whether it runs on the ground or in the air. <br><br>
-            everything i know about the aforementioned things is self-taught. i also speak english and russian
-            fluently. <br><br>
-            if you want to contact me, email <a class="click" href="mailto:me@futile.eu">me@futile.eu</a> <br><br>
-            <a class="button shiny"
-                onclick="alert(`hey!\ncould use a second pair of hands with something? programming, sys administration, or otherwise technical?\n\ni would love to work with/for you! reach out to me via email, even just to exchange info! paying me is optional, just be upfront with what you wish to do.`)">
-                hire me!</a>
+            hello, my name is futile. i am a weird concept from the internet, or, a person from europe, depending on who you ask.<br><br>
+            i love computers, programming (mostly rust), linux, malicious software (i.e. game hacks, malware), playing games, and any vehicle whether it runs on the ground or in the air.<br><br>
+            everything i know about the aforementioned things is self-taught. i also speak english and russian fluently.<br><br>
+            if you want to contact me, email <a class="click" href="mailto:me@futile.eu">me@futile.eu</a><br><br>
         </p>
     </div>
     <div class="footer-container">
         <div class="footer buttons">
             <a href="https://futile.eu" target="_blank"><img src="static/buttons/futile.png" width="88" height="31"></a>
             <a href="https://xenia.blahaj.land/" target="_blank"><img src="static/buttons/rose_88x31.png" width="88" height="31"></a>
-            <iframe src="https://increm.net/badge?key=futile" title="incremnet badge" width="88" height="31"
-                style="border: none; background: url('https://increm.net/bg.png');"></iframe>
+            <iframe src="https://increm.net/badge?key=futile" title="incremnet badge" width="88" height="31" style="border: none; background: url('https://increm.net/bg.png');"></iframe>
             <a href="https://schmool.cool" target="_blank"><img src="static/buttons/schmoolcool.gif" width="88" height="31"></a>
             <a href="https://vostok.one/~michal" target="_blank"><img src="static/buttons/michal.png" width="88" height="31"></a>
             <a href="https://vscodium.com" target="_blank"><img src="static/buttons/vscodium.com.png" width="88" height="31"></a>
@@ -240,9 +175,7 @@
             <a href="https://rust-lang.org" target="_blank"><img src="static/buttons/rustNOW.png" width="88" height="31"></a>
             <a href="https://1337x.to" target="_blank"><img src="static/buttons/piracy.png" width="88" height="31"></a>
             <a href="https://duckduckgo.com" target="_blank"><img src="static/buttons/ddg.gif" width="88" height="31"></a>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg" target="_blank">
-                <img src="static/buttons/fingerofgod.gif" width="88" height="31">
-            </a>
+            <a href="https://en.wikipedia.org/wiki/The_Creation_of_Adam" target="_blank"><img src="static/buttons/fingerofgod.gif" width="88" height="31"></a>
             <a href="https://vostok.one" target="_blank"><img src="static/buttons/vostok.png" width="88" height="31"></a>
             <img src="static/buttons/sprunk.gif" onclick="alert('SORRY\nOUT OF\nORDER')" width="88" height="31">
             <a href="https://ya.ru/" target="_blank"><img src="static/buttons/yandex.gif" width="88" height="31"></a>
