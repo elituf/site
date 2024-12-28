@@ -1,8 +1,10 @@
+set windows-shell := ["pwsh", "-NoLogo", "-Command"]
+
 server := "futile@futile.eu"
 deploy := "/var/www/futile.eu"
 
 deploy-site:
-    scp -pr index.html static/ {{server}}:{{deploy}}
+    scp -pr static/ index.css index.html index.js {{server}}:{{deploy}}
 
 deploy-caddy:
     scp -pr Caddyfile {{server}}:Caddyfile
