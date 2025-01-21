@@ -1,3 +1,4 @@
+// set the quote at bottom of page randomly
 const quotes = [
     "who are you",
     "lorem ipsum dolor sit amet",
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('quote').textContent = '« ' + quotes[randomIndex] + ' »';
 });
 
+// load alt texts for all buttons from json
 fetch('static/buttons/_alts.json')
     .then(response => response.json())
     .then(alts => {
