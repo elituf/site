@@ -40,10 +40,9 @@ body {
 .footer {
     display: flex;
     justify-content: center;
-    max-width: 480px;
+    max-width: 440px;
     margin: 0 auto;
     padding: 0 10px;
-    box-sizing: border-box;
     flex-wrap: wrap;
 }
 
@@ -83,7 +82,7 @@ body {
     margin: 24px auto auto auto;
 }
 
-@media (min-height: 800px) {
+@media (min-height: 720px) {
     .footer-container {
         position: absolute;
         inset: auto 0 12px;
