@@ -5,6 +5,7 @@ deploy := "/var/www/futile.eu"
 
 deploy-site:
     scp -pr static/ index.css index.html index.js {{server}}:{{deploy}}
+    ssh {{server}} 'chmod -R o+rX {{deploy}}/static/'
 
 deploy-caddy:
     scp -pr Caddyfile {{server}}:Caddyfile
