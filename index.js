@@ -9,6 +9,7 @@ const quotes = [
     "do you like hurting other people?",
     "check out increm.net !",
     "get real",
+    "see you space cowboy..."
 ];
 document.addEventListener('DOMContentLoaded', () => {
     const randomIndex = Math.floor(Math.random() * quotes.length);
