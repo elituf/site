@@ -13,3 +13,8 @@ deploy-caddy:
     ssh {{server}} 'sudo systemctl reload caddy'
 
 deploy: deploy-site deploy-caddy
+
+push-changes:
+    git push -u origin main
+
+full-deploy: push-changes deploy
