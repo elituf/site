@@ -3,7 +3,7 @@ www.futile.eu {
 }
 
 futile.eu {
-	root * /var/www/futile.eu
+	root * /opt/site
 	file_server
 	encode gzip zstd
 }
