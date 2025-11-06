@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "Bokor";
+    src: url("assets/Bokor-Regular.woff2") format("woff2");
+}
+
+html,
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title {
+    color: white;
+    text-decoration: none;
+    cursor: default;
+    font-family: "Bokor";
+    font-size: clamp(1em, 4em, 40vw);
+
+    /* because chromium renders this font like dogshit at weight 600 */
+    @supports not (-moz-appearance: none) {
+        font-weight: 400;
+    }
+}
