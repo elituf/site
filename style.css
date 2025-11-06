@@ -21,7 +21,8 @@ body {
     text-decoration: none;
     cursor: default;
     font-family: "Bokor";
-    font-size: clamp(1em, 4em, 40vw);
+    font-size: clamp(1em, 3.6em, 40vw);
+    user-select: none;
 
     /* because chromium renders this font like dogshit at weight 600 */
     @supports not (-moz-appearance: none) {
