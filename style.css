@@ -23,6 +23,10 @@ body {
     font-size: clamp(1em, 12em, 40vw);
     user-select: none;
 
+    /* make click area be much tighter */
+    line-height: 1;
+    overflow: hidden;
+
     /* because chromium renders this font like dogshit at weight 600 */
     @supports not (-moz-appearance: none) {
         font-weight: 400;
