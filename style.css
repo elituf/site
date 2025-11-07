@@ -8,6 +8,7 @@ body {
     margin: 0;
     background-color: black;
     cursor: url("assets/F-16.ico"), default;
+    overflow: hidden;
 }
 
 .container {
