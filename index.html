@@ -6,21 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>futile</title>
     <link rel="icon" href="static/favicon.svg" type="image/svg+xml">
-    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/mini.global.js"></script>
     <link rel="preload" href="static/fonts/Bokor-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <style>
-        @font-face {
-            font-family: "Bokor";
-            src: url("static/fonts/Bokor-Regular.woff2") format("woff2");
-        }
-
-        /* because chromium renders this font like dogshit at weight 600 */
-        @supports not (-moz-appearance: none) {
-            h1 {
-                font-weight: 400;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/mini.global.js"></script>
 </head>
 
 <body style="background-color: black;" class="m-0 bg-black overflow-hidden flex justify-center items-center h-screen">
