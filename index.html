@@ -5,14 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>futile</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/mini.global.js"></script>
+    <style>
+        @font-face {
+            font-family: "Bokor";
+            src: url("assets/Bokor-Regular.woff2") format("woff2");
+        }
+
+        /* because chromium renders this font like dogshit at weight 600 */
+        @supports not (-moz-appearance: none) {
+            h1 {
+                font-weight: 400;
+            }
+        }
+    </style>
 </head>
 
-<body>
-    <div class="container">
-        <h1 class="title" onclick="window.location.href='mailto:me@futile.eu'">futile</h1>
-    </div>
+<body
+    class="m-0 bg-black cursor-[url('assets/F-16.ico'),_default] overflow-hidden flex justify-center items-center h-screen">
+    <h1 class="text-white font-[Bokor] text-[clamp(1em,12em,40vw)] select-none leading-none overflow-hidden"
+        onclick="window.location.href='mailto:me@futile.eu'">futile</h1>
 </body>
 
 </html>
