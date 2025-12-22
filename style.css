@@ -6,8 +6,10 @@
 }
 
 /* because chromium renders this font like dogshit at weight 600 */
-@supports not (-moz-appearance: none) {
-    h1 {
+h1 {
+    font-weight: 600;
+
+    @supports not (-moz-appearance: none) {
         font-weight: 400;
     }
 }
