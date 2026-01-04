@@ -15,4 +15,21 @@
         onclick="window.location.href='mailto:me@futile.eu'">futile</h1>
 </body>
 
+<script>
+    function onKonamiCode(callback) {
+        let input = '';
+        let konamiCode = '38384040373937396665';
+        document.addEventListener('keydown', (event) => {
+            input += ('' + event.keyCode);
+            if (input === konamiCode) {
+                return callback();
+            }
+            if (!konamiCode.indexOf(input)) return;
+            input = ('' + event.keyCode);
+        });
+    }
+
+    onKonamiCode(() => { alert('ough') })
+</script>
+
 </html>
