@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@source inline("bg-white");
+@source inline("text-black");
+
 @font-face {
     font-family: "Bokor";
     src: url("static/fonts/Bokor-Regular.woff2") format("woff2");

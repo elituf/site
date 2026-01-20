@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="generated.css">
 </head>
 
-<body class="m-0 bg-black overflow-hidden flex justify-center items-center h-screen">
-    <h1 class="futile text-white font-[Bokor] text-[clamp(1em,12em,40vw)] select-none leading-none overflow-hidden"
+<body id="body" class="m-0 bg-black overflow-hidden flex justify-center items-center h-screen">
+    <h1 id="header" class="futile text-white font-[Bokor] text-[clamp(1em,12em,40vw)] select-none leading-none overflow-hidden"
         onclick="window.location.href='mailto:me@futile.eu'">futile</h1>
 </body>
 
@@ -29,7 +29,14 @@
         });
     }
 
-    onKonamiCode(() => { alert('ough') })
+    onKonamiCode(() => {
+      let body = document.getElementById("body");
+      body.classList.toggle("bg-black");
+      body.classList.toggle("bg-white");
+      let header = document.getElementById("header");
+      header.classList.toggle("text-white");
+      header.classList.toggle("text-black");
+    })
 </script>
 
 </html>
